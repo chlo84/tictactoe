@@ -2,8 +2,9 @@
 const gameBoard = document.querySelector('.game-board');
 function handledBoxClicked (e){
     e.target.innerText = currentPlayer;
+    currentPlayer = currentPlayer === 'X' ? 'O': 'X';
 }
-for(let i = 0; i < 9; i++ ){
+for(let i = 0; i < 9; i++){
  
 const box = document.createElement('div');
 
@@ -30,5 +31,14 @@ let winningConditions=[
   [0,4,8],
   [2,4,6],
 ];
+
+const clearButton = document.querySelector('.clear-button');
+clearButton.addEventListener('click', () => {
+    const boxes = document.querySelectorAll('.box');
+    for(let i = 0; i < boxes.length; i++){
+    let currentBox = boxes[i];
+    currentBox.innerText = '';
+    }
+})
 
 
