@@ -1,3 +1,8 @@
+html,body{
+    height: 100%
+}
+
+
 body{
     background: blueviolet;
     font-family: Arial, Helvetica, sans-serif;
@@ -6,25 +11,31 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:100vh;
     text-align: center;
 }
 
 .box{
     height: 150px;
     width: 150px;
+    border: 1px solid grey;
     background: rosybrown;
-    margin: 20px;
+    margin: 8px;
     justify-content: center;
-    font-size: 120px;
+    font-size: 150px;
     align-items: center;
+    cursor: pointer;
     
 }
 
 .game-board{
     display:grid;
-    grid-template-columns: 170px 170px 170px;
+    grid-template-columns: repeat(3, auto);
+    width: 482px;
+    /* margin: 50px auto; */
     border: double, firebrick;
+    line-height: 150px;
+    
+
 }
 
 .box:hover{
